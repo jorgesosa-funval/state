@@ -2,8 +2,6 @@ import React from 'react'
 import './UserCard.css';
 export default function UserCard({ avatar, name, role, email }) {
 
-
-
   return (
     <li className='card'>
       <div className='img_container'>

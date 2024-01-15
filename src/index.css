@@ -3,3 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+input{
+  width: 220px;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  margin: 10px 10px;
+  padding: 5px;
+}
+
+button{
+  width: 100px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}

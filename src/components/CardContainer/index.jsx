@@ -1,20 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import UserCard from '../UserCard'
 
 import './CardContainer.css';
-export default function CardContainer() {
-    const [users, setUsers] = useState([]);
-    const [clicked, setClicked] = useState(false);
-    
-    async function getData() {
-        const data = await fetch('users.json');
-        const jsonData = await data.json();
-        setUsers(jsonData);
-    }
-
-    useEffect(() => {
-        getData();
-    }, [])
+export default function CardContainer({users}) {
+  
 
     return (
         <ul className='card_conatiner'>

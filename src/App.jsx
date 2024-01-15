@@ -1,23 +1,40 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import CardContainer from './components/CardContainer';
 function App() {
-  // const [searchValue, setSearchValue] = useState('');
-  // const [serachedValue, setSearchedValue] = useState(users);
+  const [users, setUsers] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
 
-  // function searchUser() {
-  //   const filtered = users.filter(user => user.name.includes(searchValue));
+  async function getData() {
+    const data = await fetch('users.json');
+    const jsonData = await data.json();
+    
+    setUsers(jsonData);
+    setFilteredData(jsonData);
+  }
 
-  //   setSearchedValue(filtered);
-  // }
+  function filtrarData() {
+    const data = users.filter(user => user.name.includes(searchValue))
+    setFilteredData(data);
+  }
+
+  useEffect(() => {
+    getData();
+  }, [])
 
   return (
-    <>
+    <div>
 
-      <CardContainer />
-      
+      <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+      <button onClick={filtrarData}>Search</button>
 
-    </>
+      <CardContainer
+        users={filteredData}
+      />
+
+
+    </div>
   )
 }
 
