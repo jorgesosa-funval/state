@@ -14,7 +14,7 @@
     "email": "maria@mail.com",
     "password": "12345",
     "name": "Maria",
-    "role": "customer",
+    "role": "admin",
     "avatar": "https://i.imgur.com/DTfowdu.jpg",
     "creationAt": "2024-01-14T23:24:01.000Z",
     "updatedAt": "2024-01-14T23:24:01.000Z"
@@ -59,6 +59,16 @@
     "creationAt": "2024-01-15T06:42:26.000Z",
     "updatedAt": "2024-01-15T06:42:26.000Z"
     },
+    {
+        "id": 16,
+        "email": "erlina.dani@yahoo.com",
+        "password": "sevilla2016",
+        "name": "erlina callado",
+        "role": "customer",
+        "avatar": "https://api.lorem.space/image/face?w=640&h=480",
+        "creationAt": "2024-01-15T06:42:26.000Z",
+        "updatedAt": "2024-01-15T06:42:26.000Z"
+        },
     {
     "id": 7,
     "email": "customerHammad@gmail.com",

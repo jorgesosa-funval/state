@@ -20,3 +20,21 @@ button{
   border-radius: 8px;
   cursor: pointer;
 }
+
+
+.sugerencias{
+  padding: 20px;
+  font-size: 18px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sugerencias > li{
+  cursor: pointer;
+}
+
+.sugerencias > li:hover{
+  background: #80808034;
+}
